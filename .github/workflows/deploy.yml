@@ -11,6 +11,10 @@ jobs:
   test:
     environment: testing1
     runs-on: ubuntu-latest
+    container: 
+      image: node:18
+      env:
+        SOME_ENV_NAME: some-env-value
     env:
       MONGODB_CONNECTION_PROTOCOL: mongodb+srv
       MONGODB_CLUSTER_ADDRESS: cluster0.cfdqn.mongodb.net
